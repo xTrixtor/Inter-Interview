@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.springboot-playground</groupId>
 	<artifactId>inter-interview</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>inter-interview</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -68,6 +68,11 @@
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
 			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.15.2</version>
 		</dependency>
 	</dependencies>
 
