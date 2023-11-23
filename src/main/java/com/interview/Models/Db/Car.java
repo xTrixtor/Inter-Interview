@@ -5,12 +5,7 @@ import jakarta.persistence.*;
 @Entity
 public class Car {
     @Id
-    @SequenceGenerator(
-            name="car_id_sequence",
-            sequenceName = "car_id_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
     private String brand;

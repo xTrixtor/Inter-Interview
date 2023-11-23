@@ -5,12 +5,7 @@ import jakarta.persistence.*;
 @Entity // This tells Hibernate to make a table out of this class
 public class User {
     @Id
-    @SequenceGenerator(
-            name="user_id_sequence",
-            sequenceName = "user_id_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
