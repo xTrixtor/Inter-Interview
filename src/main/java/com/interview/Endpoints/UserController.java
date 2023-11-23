@@ -12,7 +12,6 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/user")
 @SecurityRequirement(name = "bearerAuth")
-@CrossOrigin(maxAge = 3600)
 public class UserController {
     @Autowired
     UserRepository userRepository;

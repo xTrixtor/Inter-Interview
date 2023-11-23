@@ -8,20 +8,18 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/keycloak")
-@CrossOrigin(maxAge = 3600)
+@SecurityRequirement(name = "bearerAuth")
 public class KeycloakController {
 
     @Autowired
     KeycloakService keycloakService;
     @GetMapping("/userTest")
     @RolesAllowed("Interview_User")
-    @SecurityRequirement(name = "bearerAuth")
     public String UserRoleTest(){
         return "Du bist ein User!";
     }
     @GetMapping("/adminTest")
     @RolesAllowed("Interview_Admin")
-    @SecurityRequirement(name = "bearerAuth")
     public String AdminRoleTest(){
         return "Du bist ein Admin!";
     }

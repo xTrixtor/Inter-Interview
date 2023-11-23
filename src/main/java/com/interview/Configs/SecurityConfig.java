@@ -16,8 +16,6 @@ public class SecurityConfig {
             "/v2/api-docs/**",
             "/swagger-resources/**",
             "/api/v1/keycloak/login",
-            "/api/v1/user/**," +
-                    "/**",
     };
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
